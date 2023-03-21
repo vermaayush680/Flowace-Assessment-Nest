@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "ddd59654-d632-4b33-9355-76aed8d73d69",
+		"name": "Flowace Swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26324517"
+	},
+	"item": [
+		{
+			"name": "Create Schedule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJpYXQiOjE2Nzk0MDE1MjYsImV4cCI6MTY3OTQ4NzkyNn0.WtrLHSpHtweb_ZfL99uEoHS5Q1SxvcEbAw5zJ1OhC0E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"user_id\": 1,\r\n    \"name\": \"Ayush\",\r\n    \"startTime\": \"13:00\",\r\n    \"endTime\": \"13:30\",\r\n    \"date\": \"2023-03-01\",\r\n    \"createdAt\": \"2023-03-20T15:56:18.000Z\",\r\n    \"updatedAt\": \"2023-03-20T15:56:18.000Z\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/sport_schedules/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sport_schedules",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Schedules",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sport_schedules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sport_schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Schedules for  particular Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/sport_schedules/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sport_schedules",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login and Generate JWT Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ayush\",\r\n    \"email\": \"abcdq@gmail.com\",\r\n    \"password\": \"1345fds234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
