@@ -86,3 +86,22 @@ All the API end points can be found on http://localhost:3000/api. Just open the 
 Also the Postman dump is present in the root directory for ease of access.
 
 The API are jwt authenticated so you can either use the test token present in the .env folder or generate a new one using the auth/login API.
+
+
+.env file
+
+```
+PORT = 3001
+
+JWT_SECRET = "flowacetestsecret"
+
+DATABASE_URL="mysql://root:ayushver01@localhost:3306/flowace"
+
+JWT_PAYLOAD = {
+  "sub": "1234567890",
+  "name": "Ayush Verma",
+  "iat": 1516239022
+}
+
+TOKEN = eyJhbGciOiJIUzI1NiJ9.ew.NT_k8ys_ukmEawavg2xZqtjfKhgi4wLAH-CrCcndzH8
+```
